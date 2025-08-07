@@ -1,0 +1,50 @@
+﻿<Window x:Class="Ozturk_Batuhan_PE2.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ozturk_Batuhan_PE2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+
+        <GroupBox Header="Opslagvat" Margin="138,52,136,102" >
+
+            <Canvas>
+
+                <Button x:Name="btnSchoonmaken" Content="Schoonmaken" Canvas.Left="356" Canvas.Top="15" Height="43" Width="141" Click="btnSchoonmaken_Click" />
+
+                <Button x:Name="btnOpenen" Content="Openen" Canvas.Left="479" Canvas.Top="202" Height="55" Width="94" Click="btnOpenen_Click" />
+
+                <Label x:Name="lblInloopDebiet" Content="Content" Canvas.Left="76" Canvas.Top="28"/>
+
+                <Label x:Name="lblUitloopDebiet" Content="Content" Canvas.Left="391" Canvas.Top="212"/>
+
+                <Label x:Name="lblHuidigeInhoud" Content="{Binding HuidigeInhoud}" Canvas.Left="107" Canvas.Top="129" />
+
+                <Label Content="/" Canvas.Left="186" Canvas.Top="129"/>
+
+                <Label x:Name="lblMaxCap" Content= "{Binding MaxCapaciteit}" Canvas.Left="257" Canvas.Top="129"/>
+
+                <Label Content="ml/s" Canvas.Left="107" Canvas.Top="28"/>
+
+                <Label x:Name="lblProduct" Content= "{Binding ProductNaam}" Canvas.Left="198" Canvas.Top="71"/>
+
+                <Label Content="ml/s" Canvas.Left="324" Canvas.Top="129"/>
+
+                <Label Content="ml/s" Canvas.Left="431" Canvas.Top="212"/>
+
+            </Canvas>
+
+        </GroupBox>
+
+        <ComboBox x:Name="cmbProduct" HorizontalAlignment="Left" Margin="16,23,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Producten}" SelectedItem="{Binding GeselecteerdProduct, Mode=TwoWay}" DisplayMemberPath="Naam"/>
+
+        <Button x:Name="btnOpvullen" Content="Opvullen" HorizontalAlignment="Left" Margin="86,96,0,0" VerticalAlignment="Top" Height="44" Width="100" Click="btnOpvullen_Click"/>
+
+
+
+
+
+    </Grid>
+</Window>
